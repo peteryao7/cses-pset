@@ -18,14 +18,21 @@ int main() {
     int res = 0;
 
     while (i < j) {
-        if (child[i] + child[j] > x) {
+        while (i < j && child[j] > x) {
+            j--;
+        }
+        
+        while (i < j && child[i] + child[j] > x) {
             res++;
             j--;
         }
-        else {
+
+        res++;
+        i++, j--;
+
+        if (i == j && child[i] < x)
             res++;
-            i++, j--;
-        }
     }
+
     cout << res << endl;
 }
