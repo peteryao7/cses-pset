@@ -12,13 +12,12 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 const int M = 1e9 + 7;
 
-const int mx = 2e5;
-int n, res[mx];
-array<int, 3> times[mx]; // end, start, original idx
-
 int main() {
+    int n;
     cin >> n;
 
+    int res[n];
+    array<int, 3> times[n]; // end, start, original idx
     for (int i = 0; i < n; i++) {
         cin >> times[i][1] >> times[i][0];
         times[i][2] = i;
