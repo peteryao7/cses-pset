@@ -21,6 +21,7 @@ bool valid(int i, int j) {
 }
 
 // backtrack + dfs
+// CSES pg 52
 void dfs(int i, int j, int pathLen) {
     if (i == 6 && j == 0) {
         if (pathLen == 48)
