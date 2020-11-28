@@ -26,7 +26,7 @@ int main() {
         for (int i = 0; i < n; i++) {
             int x;
             cin >> x;
-            nimSum ^= x % 4;
+            nimSum ^= x % 4; // only difference from Nim Game 1
         }
 
         if (nimSum) cout << "first" << endl;
